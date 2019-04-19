@@ -1,13 +1,16 @@
 #include<iostream>
+#include<stdio.h>
 
 using namespace std;
 
 int main()
 {
+    int m;
+    cin>>m;
 	int n;
 	cin>>n;
 	int temp;
-	for(int i=2; i<=n; i++)
+	for(int i=m; i<=n; i++)
 	{
 		temp =1;
 		for(int j=2; j<i; j++)
@@ -19,8 +22,10 @@ int main()
 		}
 		if(temp == 1)
 		{
-			cout<<i<<endl;
+			cout<<i;
+			printf(" %c",i);
+			cout<<endl;
 		}
-		
+
 	}
 }
