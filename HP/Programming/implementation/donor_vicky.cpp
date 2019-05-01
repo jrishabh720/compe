@@ -11,6 +11,8 @@ int main()
 		int n,x;
 		cin>>n>>x;
 		int arr[n] = {0};
+		int temp = n*(n+1)/2;
+		int iteration = x/temp;
 		for(int i=1; i<=n; i++)
 		{
 			arr[i] += i;

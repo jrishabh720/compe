@@ -1,23 +1,33 @@
-#include<bits/stdc++.h>
+#include<iostream>
 
 using namespace std;
 
 int main()
 {
-	int n;
+	long n;
 	cin>>n;
 	int arr[n];
-	for(int i=0; i<n; i++)
+	for(long i =0; i<n; i++)
 	{
 		cin>>arr[i];
-		
 	}
-	
-	for(int i=1; i<n; i++)
+	for(long j=0; j<n; j++)
 	{
-		if(arr[i]>arr[i-1])
+		int flag =0;
+
+		for(long p=j+1; p<n; p++)
 		{
-			cout<<arr[i]<<" ";
+			if(arr[j]<arr[p])
+			{
+				flag = 1;
+				break;
+			}
+		}
+		if(flag == 0)
+		{
+			cout<<arr[j]<<" ";
 		}
 	}
+	
+	
 }
